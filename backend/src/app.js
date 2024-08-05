@@ -20,4 +20,10 @@ app.use(cookieParser()); // parse the cookies from the request headers
 // Middleware to handle form-data (multipart)
 app.use(upload.none());
 
+//import routes
+
+import userRouter from "./routes/user.routes.js"
+
+app.use("/api/v1/users",userRouter)
+
 export default app;
